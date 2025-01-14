@@ -3,9 +3,23 @@
 // Add a method setYear(newYear) that updates the year only if newYear >= the current year.
 
 class Car {
-  // YOUR CODE HERE
-}
+  make;
+  model;
+  year;
 
+  constructor(make, model, year) {
+    this.model = model;
+    this.make = make;
+    this.year = year;
+  }
+  getCarInfo() {
+    return `Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`;
+  }
+
+  setYear(year) {
+    this.year = year;
+  }
+}
 
 // TEST CASE / DRIVER CODE
 const car1 = new Car("Toyota", "Corolla", 2010);
